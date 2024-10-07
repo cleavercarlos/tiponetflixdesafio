@@ -1,23 +1,24 @@
-<h1>Movies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Synopsis</th>
-      <th>Director</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @movies.each do |movie| %>
+<div class="container">
+  <h1>Netfliz - Movies</h1>
+  
+  <table class="table table-striped table-bordered">
+    <thead>
       <tr>
-        <td><%= movie.name %></td>
-        <td><%= movie.synopsis %></td>
-        <td><%= movie.director %></td>
+        <th>Name</th>
+        <th>Synopsis</th>
+        <th>Director</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.name %></td>
+          <td><%= movie.synopsis %></td>
+          <td><%= movie.director %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Movie', new_movie_path %>
-
+  <%= link_to 'New Movie', new_movie_path, class: "btn btn-primary" %>
+</div>
