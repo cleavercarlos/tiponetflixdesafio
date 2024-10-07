@@ -1,9 +1,19 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+
+# Movies
+Movie.create([
+  { name: 'Inception', synopsis: 'A thief who steals corporate secrets...', director: 'Christopher Nolan' },
+  { name: 'The Matrix', synopsis: 'A computer hacker learns about the true nature...', director: 'The Wachowskis' }
+])
+
+# Series
+Serie.create([
+  { name: 'Breaking Bad', synopsis: 'A high school chemistry teacher turned methamphetamine producer...', director: 'Vince Gilligan' },
+  { name: 'Stranger Things', synopsis: 'A group of kids encounter supernatural forces...', director: 'The Duffer Brothers' }
+])
+
+# Documentary Films
+DocumentaryFilm.create([
+  { name: 'The Social Dilemma', synopsis: 'Explores the dangerous human impact of social networking...', director: 'Jeff Orlowski' },
+  { name: 'Planet Earth', synopsis: 'A documentary series about the planet...', director: 'David Attenborough' }
+])
